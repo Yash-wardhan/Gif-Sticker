@@ -1,9 +1,3 @@
-
-// homepage
-// categories
-// serch 
-// single gif 
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import AppLayout from "./layouts/app-layout"
 import Home from "./pages/Home"
@@ -11,6 +5,7 @@ import Category from "./pages/Category"
 import Search from "./pages/Search"
 import SingleGif from "./pages/Single-gif"
 import Favorites from "./pages/Favorites"
+import GifProvider from "./context/gif-context"
 
 
 // fav 
@@ -44,7 +39,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-      <RouterProvider router = {router} />    
+      <GifProvider>
+        <RouterProvider router = {router} />    
+      </GifProvider>
     </div>
   )
 }
