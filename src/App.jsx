@@ -3,7 +3,7 @@ import AppLayout from "./layouts/app-layout"
 import Home from "./pages/Home"
 import Category from "./pages/Category"
 import Search from "./pages/Search"
-import SingleGif from "./pages/Single-gif"
+import Singlegif from "./pages/Single-gif"
 import Favorites from "./pages/Favorites"
 import GifProvider from "./context/gif-context"
 
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/:type/:slug',
-        element: <SingleGif/>
+        element: <Singlegif/>
       },
       {
         path:'/favorites',
